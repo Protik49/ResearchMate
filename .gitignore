@@ -24,6 +24,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Test output artifacts
+test-results/
+playwright-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
