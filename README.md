@@ -4,8 +4,13 @@
 [![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://react.dev/)
 [![Express](https://img.shields.io/badge/Express-4.19-black.svg)](https://expressjs.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-Database%20%26%20Auth-3ECF8E.svg)](https://supabase.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-Live_Frontend-F38020.svg?logo=cloudflare)](https://researchmate-6yg.pages.dev/)
+[![Render](https://img.shields.io/badge/Render-Live_API-46E3B7.svg?logo=render)](https://researchmate-9dey.onrender.com/api/health)
 [![Postman](https://img.shields.io/badge/Postman-Automated%20Tests%20(29%2F29%20Passed)-FF6C37.svg)](https://www.postman.com/)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+
+> **Live Application**: [https://researchmate-6yg.pages.dev/](https://researchmate-6yg.pages.dev/)  
+> **Live API Base**: [https://researchmate-9dey.onrender.com/api](https://researchmate-9dey.onrender.com/api)  
+> **API Testing Documentation**: [`postman/Talentry_API_Testing_Report.md`](postman/Talentry_API_Testing_Report.md)
 
 > A modern, production-ready academic portal for **BRAC University's Department of Computer Science & Engineering** (School of Data & Computational Sciences). Engineered with an editorial, high-contrast design system inspired by Acctual, verified faculty rosters, interactive exam timetable conflict detectors, role-based dashboards, and a complete Supabase JWT authentication engine.
 
