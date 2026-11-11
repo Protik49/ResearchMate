@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
+import { API_BASE } from '../lib/api';
 
 const AuthContext = createContext(null);
 
@@ -136,7 +137,7 @@ export function AuthProvider({ children }) {
 
       // 1. Register and verify via server Admin API
       try {
-        const res = await fetch('/api/auth/register', {
+        const res = await fetch(`${API_BASE}/api/auth/register`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password, fullName: userName, role: assignedRole })

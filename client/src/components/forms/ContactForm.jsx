@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { API_BASE } from '../../lib/api';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ export default function ContactForm() {
 
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch(`${API_BASE}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

@@ -39,6 +39,7 @@ import Table from '../components/ui/Table';
 import Modal from '../components/ui/Modal';
 import FacultyForm from '../components/forms/FacultyForm';
 import ProfileUpdateForm from '../components/forms/ProfileUpdateForm';
+import { API_BASE } from '../lib/api';
 
 const COLORS = ['#18181b', '#3f3f46', '#71717a', '#a1a1aa', '#d4d4d8'];
 
@@ -58,10 +59,10 @@ export default function AdminDashboard({ facultyList, onSelectFaculty }) {
   useEffect(() => {
     async function loadData() {
       try {
-        const aRes = await fetch('http://localhost:5000/api/analytics/overview');
+        const aRes = await fetch(`${API_BASE}/api/analytics/overview`);
         if (aRes.ok) setAnalytics(await aRes.json());
 
-        const mRes = await fetch('http://localhost:5000/api/contact');
+        const mRes = await fetch(`${API_BASE}/api/contact`);
         if (mRes.ok) setMessages(await mRes.json());
       } catch (e) {
         console.info('Using fallback dynamic analytics.');

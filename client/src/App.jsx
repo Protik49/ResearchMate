@@ -19,6 +19,7 @@ import LoginForm from './components/forms/LoginForm';
 import RegisterForm from './components/forms/RegisterForm';
 import { useAuth } from './context/AuthContext';
 import { INITIAL_FACULTY, INITIAL_UPDATES, INITIAL_EXAMS } from './data/mockData';
+import { API_BASE } from './lib/api';
 
 export default function App() {
   const { user } = useAuth();
@@ -36,7 +37,7 @@ export default function App() {
     let mounted = true;
     async function loadLive() {
       try {
-        const res = await fetch('http://localhost:5000/api/faculty');
+        const res = await fetch(`${API_BASE}/api/faculty`);
         if (res.ok) {
           const data = await res.json();
           if (mounted && Array.isArray(data) && data.length > 0) {

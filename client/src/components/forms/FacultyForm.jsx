@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
+import { API_BASE } from '../../lib/api';
 
 export default function FacultyForm({ initialData = null, onSuccess, onCancel }) {
   const isEdit = Boolean(initialData?.id);
@@ -42,7 +43,7 @@ export default function FacultyForm({ initialData = null, onSuccess, onCancel })
     };
 
     try {
-      const url = isEdit ? `http://localhost:5000/api/faculty/${initialData.id}` : 'http://localhost:5000/api/faculty';
+      const url = isEdit ? `${API_BASE}/api/faculty/${initialData.id}` : `${API_BASE}/api/faculty`;
       const method = isEdit ? 'PUT' : 'POST';
 
       const res = await fetch(url, {
